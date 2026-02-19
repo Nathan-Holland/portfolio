@@ -27,7 +27,7 @@ export default function Hero() {
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="1.2"
-                  className="inline -mt-2"
+                  className="inline -mt-2 globe-animate"
                 >
                   <circle cx="12" cy="12" r="10" />
                   <path d="M2 12h20" />
