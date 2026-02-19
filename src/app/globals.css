@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --color-offwhite: #F4F4F4;
+  --color-tag-bg: #F3EDED;
+  --color-muted: #707070;
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth link underline animation */
+a {
+  transition: opacity 0.3s ease;
+}
+
+/* Subtle nav entrance */
+nav {
+  animation: fadeDown 0.5s ease both;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
