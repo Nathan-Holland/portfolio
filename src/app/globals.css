@@ -22,18 +22,3 @@ a {
   transition: opacity 0.3s ease;
 }
 
-/* Subtle nav entrance */
-nav {
-  animation: fadeDown 0.5s ease both;
-}
-
-@keyframes fadeDown {
-  from {
-    opacity: 0;
-    transform: translateY(-8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
