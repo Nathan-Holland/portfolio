@@ -3,7 +3,7 @@ import ProjectRow from "@/components/ProjectRow";
 import FadeIn from "@/components/FadeIn";
 
 const projects = [
-  { title: "Crunch", tags: ["Branding", "UI Design"], year: "2025" },
+  { title: "Crunch", tags: ["Branding", "UI Design"], year: "2025", image: "/projects/crunch/main_img.jpg" },
   { title: "Wedge", tags: ["App Design"], year: "2026" },
   { title: "Preply", tags: ["Product Design"], year: "2025" },
   { title: "SplitMetrics", tags: ["Branding"], year: "2026" },
@@ -79,6 +79,7 @@ export default function ProjectsPage() {
             title={project.title}
             tags={project.tags}
             year={project.year}
+            image={project.image}
             index={i}
           />
         ))}
