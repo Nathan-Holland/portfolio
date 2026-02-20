@@ -60,9 +60,9 @@ export default function AboutSection() {
   const words = bioText.split(" ");
 
   return (
-    <section ref={sectionRef} id="about" className="px-5 py-24">
-      <div className="flex">
-        <div className="w-1/3">
+    <section ref={sectionRef} id="about" style={{ padding: "160px 20px" }}>
+      <div className="grid grid-cols-12" style={{ gap: "32px" }}>
+        <div className="col-span-4">
           <div
             ref={labelRef}
             className="flex items-center gap-2 text-sm text-muted"
@@ -84,7 +84,7 @@ export default function AboutSection() {
           </div>
         </div>
 
-        <div className="w-2/3">
+        <div className="col-start-5 col-end-13">
           <p
             ref={textRef}
             className="text-[40px] font-normal leading-[1.25] tracking-tight"

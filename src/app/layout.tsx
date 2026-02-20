@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import SmoothScroll from "@/components/SmoothScroll";
+import GridOverlay from "@/components/GridOverlay";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -16,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-white text-black">
+        <GridOverlay />
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>

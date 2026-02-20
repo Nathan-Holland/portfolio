@@ -15,57 +15,12 @@ export default function Hero() {
   useGSAP(() => {
     if (!sectionRef.current) return;
 
-    // Entrance timeline
+    // Entrance timeline (slide only, no opacity)
     const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
-    tl.from(timeRef.current, { y: 30, opacity: 0, duration: 0.8 }, 0.1)
-      .from(headingRef.current, { y: 40, opacity: 0, duration: 0.9 }, 0.2)
-      .from(subtitleRef.current, { y: 20, opacity: 0, duration: 0.7 }, 0.4)
-      .from(ctaRef.current, { y: 20, opacity: 0, duration: 0.7 }, 0.5);
-
-    // Parallax on scroll
-    gsap.to(timeRef.current, {
-      y: -40,
-      opacity: 0.3,
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top top",
-        end: "bottom top",
-        scrub: 0.8,
-      },
-    });
-
-    gsap.to(headingRef.current, {
-      y: -80,
-      opacity: 0,
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top top",
-        end: "bottom top",
-        scrub: 0.8,
-      },
-    });
-
-    gsap.to(subtitleRef.current, {
-      y: -30,
-      opacity: 0,
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "20% top",
-        end: "bottom top",
-        scrub: 0.8,
-      },
-    });
-
-    gsap.to(ctaRef.current, {
-      y: -20,
-      opacity: 0,
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "20% top",
-        end: "bottom top",
-        scrub: 0.8,
-      },
-    });
+    tl.from(timeRef.current, { y: 30, duration: 0.8 }, 0.1)
+      .from(headingRef.current, { y: 40, duration: 0.9 }, 0.2)
+      .from(subtitleRef.current, { y: 20, duration: 0.7 }, 0.4)
+      .from(ctaRef.current, { y: 20, duration: 0.7 }, 0.5);
   }, { scope: sectionRef });
 
   return (

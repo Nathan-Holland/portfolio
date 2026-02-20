@@ -27,12 +27,12 @@ export default function ProjectsPage() {
   useGSAP(() => {
     if (!heroRef.current) return;
 
-    // Staggered entrance timeline
+    // Staggered entrance timeline (slide only, no opacity)
     const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
-    tl.from(labelRef.current, { x: -30, opacity: 0, duration: 0.8 }, 0.1)
-      .from(headingRef.current, { y: 40, opacity: 0, duration: 0.9 }, 0.2)
-      .from(subtitleRef.current, { y: 20, opacity: 0, duration: 0.7 }, 0.35)
-      .from(ctaRef.current, { y: 20, opacity: 0, duration: 0.7 }, 0.45);
+    tl.from(labelRef.current, { x: -30, duration: 0.8 }, 0.1)
+      .from(headingRef.current, { y: 40, duration: 0.9 }, 0.2)
+      .from(subtitleRef.current, { y: 20, duration: 0.7 }, 0.35)
+      .from(ctaRef.current, { y: 20, duration: 0.7 }, 0.45);
   }, { scope: heroRef });
 
   return (
