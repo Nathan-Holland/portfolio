@@ -33,51 +33,6 @@ export default function ProjectsPage() {
       .from(headingRef.current, { y: 40, opacity: 0, duration: 0.9 }, 0.2)
       .from(subtitleRef.current, { y: 20, opacity: 0, duration: 0.7 }, 0.35)
       .from(ctaRef.current, { y: 20, opacity: 0, duration: 0.7 }, 0.45);
-
-    // Parallax on scroll
-    gsap.to(headingRef.current, {
-      y: -60,
-      opacity: 0,
-      scrollTrigger: {
-        trigger: heroRef.current,
-        start: "top top",
-        end: "bottom top",
-        scrub: 0.8,
-      },
-    });
-
-    gsap.to(labelRef.current, {
-      y: -30,
-      opacity: 0,
-      scrollTrigger: {
-        trigger: heroRef.current,
-        start: "top top",
-        end: "bottom top",
-        scrub: 0.8,
-      },
-    });
-
-    gsap.to(subtitleRef.current, {
-      y: -20,
-      opacity: 0,
-      scrollTrigger: {
-        trigger: heroRef.current,
-        start: "20% top",
-        end: "bottom top",
-        scrub: 0.8,
-      },
-    });
-
-    gsap.to(ctaRef.current, {
-      y: -20,
-      opacity: 0,
-      scrollTrigger: {
-        trigger: heroRef.current,
-        start: "20% top",
-        end: "bottom top",
-        scrub: 0.8,
-      },
-    });
   }, { scope: heroRef });
 
   return (
