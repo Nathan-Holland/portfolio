@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ScrollTrigger } from "@/lib/gsap";
 
 export default function PageTransition({
   children,
@@ -14,6 +15,9 @@ export default function PageTransition({
       transition={{
         duration: 0.5,
         ease: [0.25, 0.1, 0.25, 1],
+      }}
+      onAnimationComplete={() => {
+        ScrollTrigger.refresh();
       }}
     >
       {children}
