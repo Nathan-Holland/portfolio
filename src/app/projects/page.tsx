@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "@/lib/gsap";
 import Navbar from "@/components/Navbar";
-import ProjectRow from "@/components/ProjectRow";
+import ProjectList from "@/components/ProjectList";
 
 const projects = [
   { title: "Crunch", tags: ["Branding", "UI Design"], year: "2025", image: "/projects/crunch/main_img.jpg" },
@@ -141,16 +141,7 @@ export default function ProjectsPage() {
 
       {/* Project List */}
       <section className="pb-20">
-        {projects.map((project, i) => (
-          <ProjectRow
-            key={project.title}
-            title={project.title}
-            tags={project.tags}
-            year={project.year}
-            image={project.image}
-            index={i}
-          />
-        ))}
+        <ProjectList projects={projects} />
       </section>
     </main>
   );
